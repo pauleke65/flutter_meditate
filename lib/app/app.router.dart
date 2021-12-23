@@ -39,10 +39,23 @@ class StackedRouter extends RouterBase {
       );
     },
     OnboardingView: (data) {
+      var args = data.getArgs<OnboardingViewArguments>(
+        orElse: () => OnboardingViewArguments(),
+      );
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const OnboardingView(),
+        builder: (context) => OnboardingView(key: args.key),
         settings: data,
       );
     },
   };
+}
+
+/// ************************************************************************
+/// Arguments holder classes
+/// *************************************************************************
+
+/// OnboardingView arguments holder class
+class OnboardingViewArguments {
+  final Key? key;
+  OnboardingViewArguments({this.key});
 }
