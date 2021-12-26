@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked/stacked_annotations.dart';
 
-import '../views/onboarding/onboarding_view.dart';
+import '../views/screens/onboarding/onboarding_view.dart';
 import '../views/screens/splashscreen/splashscreen_view.dart';
 
 class Routes {

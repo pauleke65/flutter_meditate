@@ -7,7 +7,7 @@ class SplashScreenViewModel extends BaseViewModel {
   final _navigationService = locator<NavigationService>();
 
   initSplScrn() async {
-    await Future.delayed(const Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 2));
 
     _navigationService.replaceWith(Routes.onboardingView);
   }

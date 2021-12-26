@@ -1,4 +1,4 @@
-import 'package:flutter_meditate/views/onboarding/onboarding_view.dart';
+import 'package:flutter_meditate/views/screens/onboarding/onboarding_view.dart';
 import 'package:flutter_meditate/views/screens/splashscreen/splashscreen_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
