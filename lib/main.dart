@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: AppColors.primary,
-        textTheme: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme),
-      ),
+          primaryColor: AppColors.primary,
+          textTheme: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme),
+          scaffoldBackgroundColor: AppColors.white),
       navigatorKey: StackedService.navigatorKey,
       onGenerateRoute: StackedRouter().onGenerateRoute,
     );

@@ -10,15 +10,18 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked/stacked_annotations.dart';
 
+import '../views/screens/login/login_view.dart';
 import '../views/screens/onboarding/onboarding_view.dart';
 import '../views/screens/splashscreen/splashscreen_view.dart';
 
 class Routes {
   static const String splashScreenView = '/';
   static const String onboardingView = '/onboarding-view';
+  static const String loginView = '/login-view';
   static const all = <String>{
     splashScreenView,
     onboardingView,
+    loginView,
   };
 }
 
@@ -28,6 +31,7 @@ class StackedRouter extends RouterBase {
   final _routes = <RouteDef>[
     RouteDef(Routes.splashScreenView, page: SplashScreenView),
     RouteDef(Routes.onboardingView, page: OnboardingView),
+    RouteDef(Routes.loginView, page: LoginView),
   ];
   @override
   Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
@@ -47,6 +51,15 @@ class StackedRouter extends RouterBase {
         settings: data,
       );
     },
+    LoginView: (data) {
+      var args = data.getArgs<LoginViewArguments>(
+        orElse: () => LoginViewArguments(),
+      );
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => LoginView(key: args.key),
+        settings: data,
+      );
+    },
   };
 }
 
@@ -58,4 +71,10 @@ class StackedRouter extends RouterBase {
 class OnboardingViewArguments {
   final Key? key;
   OnboardingViewArguments({this.key});
+}
+
+/// LoginView arguments holder class
+class LoginViewArguments {
+  final Key? key;
+  LoginViewArguments({this.key});
 }

@@ -89,7 +89,7 @@ class OnboardingView extends StatelessWidget {
                       ],
                     )
                   : TextButton(
-                      onPressed: () {},
+                      onPressed: model.navigateToLogin,
                       child: Text(
                         "Get Started",
                         style: AppTextStyles.text18Bold
