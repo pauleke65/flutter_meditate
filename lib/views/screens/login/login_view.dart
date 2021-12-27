@@ -51,7 +51,7 @@ class LoginView extends StatelessWidget {
               ),
               SizedBox(height: _screenSize.height * 0.1),
               MaterialButton(
-                onPressed: () {},
+                onPressed: model.navigateToHome,
                 child: Text(
                   "Login",
                   style: AppTextStyles.text18.copyWith(color: AppColors.white),

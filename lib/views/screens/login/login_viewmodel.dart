@@ -9,4 +9,8 @@ class LoginViewModel extends BaseViewModel {
   void navigateToSignUp() {
     _navigationService.navigateTo(Routes.signUpView);
   }
+
+  void navigateToHome() {
+    _navigationService.navigateTo(Routes.homeView);
+  }
 }

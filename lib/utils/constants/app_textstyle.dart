@@ -25,4 +25,15 @@ class AppTextStyles {
     fontSize: _height * 0.018,
     fontWeight: FontWeight.bold,
   );
+  static TextStyle text16 = TextStyle(fontSize: _height * 0.016);
+  static TextStyle text16Bold = TextStyle(
+    fontSize: _height * 0.016,
+    fontWeight: FontWeight.bold,
+  );
+
+  static TextStyle text14 = TextStyle(fontSize: _height * 0.014);
+  static TextStyle text14Bold = TextStyle(
+    fontSize: _height * 0.014,
+    fontWeight: FontWeight.bold,
+  );
 }

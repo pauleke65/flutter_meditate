@@ -1,3 +1,4 @@
+import 'package:flutter_meditate/views/screens/home/home_view.dart';
 import 'package:flutter_meditate/views/screens/login/login_view.dart';
 import 'package:flutter_meditate/views/screens/onboarding/onboarding_view.dart';
 import 'package:flutter_meditate/views/screens/signup/signup_view.dart';
@@ -7,10 +8,11 @@ import 'package:stacked_services/stacked_services.dart';
 
 @StackedApp(
   routes: [
-    MaterialRoute(page: SplashScreenView, initial: true),
+    MaterialRoute(page: SplashScreenView),
     MaterialRoute(page: OnboardingView),
     MaterialRoute(page: LoginView),
     MaterialRoute(page: SignUpView),
+    MaterialRoute(page: HomeView, initial: true),
   ],
   dependencies: [
     LazySingleton(classType: NavigationService),

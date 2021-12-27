@@ -51,7 +51,7 @@ class SignUpView extends StatelessWidget {
               SizedBox(height: _screenSize.height * 0.03),
               SizedBox(height: _screenSize.height * 0.1),
               MaterialButton(
-                onPressed: () {},
+                onPressed: model.navigateToHome,
                 child: Text(
                   "Create Account",
                   style: AppTextStyles.text18.copyWith(color: AppColors.white),
@@ -69,7 +69,7 @@ class SignUpView extends StatelessWidget {
               ),
               SizedBox(height: _screenSize.height * 0.03),
               TextButton(
-                onPressed: () {},
+                onPressed: model.navigateToLogin,
                 child: Text(
                   "Sign in",
                   style: AppTextStyles.text18.copyWith(color: AppColors.text),
