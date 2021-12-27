@@ -4,18 +4,19 @@ import 'package:flutter_meditate/utils/constants/app_textstyle.dart';
 import 'package:flutter_meditate/views/components/auth_textformfield.dart';
 import 'package:stacked/stacked.dart';
 
-import 'login_viewmodel.dart';
+import 'signup_viewmodel.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({Key? key}) : super(key: key);
+class SignUpView extends StatelessWidget {
+  const SignUpView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final _screenSize = MediaQuery.of(context).size;
+    final fullNameController = TextEditingController();
     final emailController = TextEditingController();
     final passwordController = TextEditingController();
 
-    return ViewModelBuilder<LoginViewModel>.reactive(
+    final _screenSize = MediaQuery.of(context).size;
+    return ViewModelBuilder<SignUpViewModel>.reactive(
       builder: (context, model, child) => Scaffold(
         body: Container(
           width: double.infinity,
@@ -26,10 +27,16 @@ class LoginView extends StatelessWidget {
             children: [
               SizedBox(height: _screenSize.height * 0.1),
               Text(
-                "Sign In",
+                "Create Account",
                 style: AppTextStyles.text25Bold,
               ),
               SizedBox(height: _screenSize.height * 0.1),
+              AuthTextFormField(
+                  hintText: "Full Name",
+                  icon: Icons.person_outline_rounded,
+                  controller: fullNameController,
+                  authFormFieldType: AuthFormFieldType.text),
+              SizedBox(height: _screenSize.height * 0.03),
               AuthTextFormField(
                   hintText: "Email Address",
                   icon: Icons.mail_outline_rounded,
@@ -42,18 +49,11 @@ class LoginView extends StatelessWidget {
                   controller: passwordController,
                   authFormFieldType: AuthFormFieldType.password),
               SizedBox(height: _screenSize.height * 0.03),
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  "Forgot Password?",
-                  style: AppTextStyles.text18.copyWith(color: AppColors.text),
-                ),
-              ),
               SizedBox(height: _screenSize.height * 0.1),
               MaterialButton(
                 onPressed: () {},
                 child: Text(
-                  "Login",
+                  "Create Account",
                   style: AppTextStyles.text18.copyWith(color: AppColors.white),
                 ),
                 color: AppColors.primary2,
@@ -69,9 +69,9 @@ class LoginView extends StatelessWidget {
               ),
               SizedBox(height: _screenSize.height * 0.03),
               TextButton(
-                onPressed: model.navigateToSignUp,
+                onPressed: () {},
                 child: Text(
-                  "Create an Account",
+                  "Sign in",
                   style: AppTextStyles.text18.copyWith(color: AppColors.text),
                 ),
               ),
@@ -79,7 +79,7 @@ class LoginView extends StatelessWidget {
           ),
         ),
       ),
-      viewModelBuilder: () => LoginViewModel(),
+      viewModelBuilder: () => SignUpViewModel(),
     );
   }
 }
