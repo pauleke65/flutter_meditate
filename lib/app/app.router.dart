@@ -17,11 +17,11 @@ import '../views/screens/signup/signup_view.dart';
 import '../views/screens/splashscreen/splashscreen_view.dart';
 
 class Routes {
-  static const String splashScreenView = '/splash-screen-view';
+  static const String splashScreenView = '/';
   static const String onboardingView = '/onboarding-view';
   static const String loginView = '/login-view';
   static const String signUpView = '/sign-up-view';
-  static const String homeView = '/';
+  static const String homeView = '/home-view';
   static const all = <String>{
     splashScreenView,
     onboardingView,
